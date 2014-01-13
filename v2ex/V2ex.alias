@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="Legacy" ?>
+<!-- This file defines aliases for use by the Find and Run Robot program (http://www.donationcoder.com/Software/Mouser/findrun/index.html). -->
+<FarrAliasFile>
+    <FileFormatVersion>1</FileFormatVersion>
+    <AliasSetDescription>Custom User Alias File</AliasSetDescription>
+    <AliasEntry>
+        <AliasText>vn</AliasText>
+        <Score>1000</Score>
+        <Regex>^vn (.*)</Regex>
+        <Results>
+            <Result>dosearch v2ex +news $$1</Result>
+        </Results>
+    </AliasEntry>
+</FarrAliasFile>

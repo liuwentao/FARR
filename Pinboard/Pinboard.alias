@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="Legacy" ?>
+<!-- This file defines aliases for use by the Find and Run Robot program (http://www.donationcoder.com/Software/Mouser/findrun/index.html). -->
+<FarrAliasFile>
+    <FileFormatVersion>1</FileFormatVersion>
+    <AliasSetDescription>Custom User Alias File</AliasSetDescription>
+    <AliasEntry>
+        <AliasText>ptu</AliasText>
+        <Score>1000</Score>
+        <Regex>^ptu (.*)</Regex>
+        <Results>
+            <Result>dosearch pb +tags $$1</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>pt</AliasText>
+        <Score>1000</Score>
+        <Regex>^pt (.*)</Regex>
+        <Results>
+            <Result>dosearch pb +tags +nu $$1</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>pu</AliasText>
+        <Score>1000</Score>
+        <Regex>^pu (.*)</Regex>
+        <Results>
+            <Result>dosearch pb +posts $$1</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>ps</AliasText>
+        <Score>1000</Score>
+        <Regex>^ps (.*)</Regex>
+        <Results>
+            <Result>dosearch pb +posts +nu $$1</Result>
+        </Results>
+    </AliasEntry>
+</FarrAliasFile>

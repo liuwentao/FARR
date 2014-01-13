@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="Legacy" ?>
+<!-- This file defines aliases for use by the Find and Run Robot program (http://www.donationcoder.com/Software/Mouser/findrun/index.html). -->
+<FarrAliasFile>
+    <FileFormatVersion>1</FileFormatVersion>
+    <AliasSetDescription>Custom User Alias File</AliasSetDescription>
+    <AliasEntry>
+        <AliasText>gitstarupdate</AliasText>
+        <Score>1000</Score>
+        <Regex>^gitstarupdate (.*)</Regex>
+        <Results>
+            <Result>dosearch git  +star $$1</Result>
+        </Results>
+    </AliasEntry>
+    <AliasEntry>
+        <AliasText>gitstar</AliasText>
+        <Score>1000</Score>
+        <Regex>^gitstar (.*)</Regex>
+        <Results>
+            <Result>dosearch git +nu +star $$1</Result>
+        </Results>
+    </AliasEntry>
+</FarrAliasFile>
