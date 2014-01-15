@@ -26,3 +26,14 @@
 
 * gitstar 列出所有加星的repo
 * git +star 可以更新本地端缓存
+
+###ALIAS
+* Pinboard
+ * `ps `+关键词 搜索所有的搜藏页.支持标题
+ * `psu `+关键词 更新缓存并搜索.稍微可能有延迟
+ * `pt `+关键词 从缓存中查找tag标签
+ * `ptu `+关键词 更新tag的缓存,并查找
+* V2EX
+ * vn 查看v2ex上面最新的帖子.支持在这些帖子中搜索
+* GITHUB
+ * `gitstar `+关键词 列出所有加星的repo
