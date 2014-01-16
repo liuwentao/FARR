@@ -48,39 +48,38 @@ function onSearchBegin(querykey, explicit, queryraw, querynokeyword) {
 ###FARR global object
 
 #### FARR.emitResult(querykey, title, path, icon, entrytype=FILE, resultpostprocessing=2, score=300);
- return result to FARR
+ 添加查询结果到`FARR`中
 #### FARR.setState(querykey, s)
-you should set state to SEARCHING before search and to STOPPED when done
+在开始搜索之前需要设定状态为`SEARCHING`,在搜索完成以后需要设定状态为`STOPPED`
 #### FARR.notifyStateChange(querykey)
-call notifyStateChange when you want to publish intermediate results (farr does not seem to update display right now, but almost... )
+如果想把结果显示出来的话,可以调用`notifyStateChange`(这个要看几率了...)
 #### FARR.setStrValue(command, value)
-do some special FARR action like setting statusbar, richedit (see farr plugin action documentation )
+对`FARR`设定一些特殊的操作,如修改状态栏,设定`richedit`.(可以参考`FARR`的`plugin action`部分的文档)
 #### FARR.getStrValue(command, value)
 
-get a FARR internal value :
+获得FARR内部的参数:
 
 * Version.FARR (2.xx.xx style)
 * Version.FARR_PLUGINAPI (1.xx.xx style)
 * Version.FARR_PLUGINAPI_RELEASENUM (# style) <-- empty before V3. 
 
 #### FARR.debug(txt)
-display a message box for helping debugging (you probably won't need it :)
+弹出一个消息框,用来提示调试信息.类似于`javascript`中的`alert`.
 #### FARR.setInterval(id, millisecond, pFunc)
-set a periodic callback (id is a number, millisecond the time before next event, pFunc a javacsript function )
+设置定时任务,事件发生的间隔,`pFunc`为回调函数
 #### FARR.killInterval(id);
-stop a periodic callback (or die :)
+停止定时任务
 #### FARR.showOptions()
-show the internal option dialog
+显示参数配置
 #### FARR.exec(file,parameters,currentdirectory)
-run some command
+执行某些命令
 #### FARR.getIniValue(file,section,value,def)
-read an ini value in a file
+获取ini的值
 
 ###Available callbacks
 
-The javascript SDK will call you on the following global functions.
-You don't have to define them. If you don't need them you don't need to define them.
-Be lazy... Define only the ones you need.
+`javascript SDK`会调用以下的函数,不需要全部都定义.如果有需要的话,才定义.
+偷懒的话,只定义用到的就可以了.
 
 ####onInit(currentDirectory)
 called when the plugin start. Initialisations can be done here. If you need the directory of the plugin you can get it here.
