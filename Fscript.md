@@ -5,7 +5,6 @@
 ###插件安装
 把`FScript.dll`复制到`Farr/plugins/sample/`目录里面.然后创建一个`fscript.js`然后拷贝如下的示例代码:
 ```javasciprt
-{{{
 // plugin script :
 displayname="MyJavascriptPlugin";
 versionstring="1.0.0";
@@ -41,7 +40,6 @@ function onSearchBegin(querykey, explicit, queryraw, querynokeyword) {
     FARR.emitResult(querykey,"Hello", "Hello", iconfilename,UNKNOWN,IMMEDIATE_DISPLAY,1000);    // emit one result
     FARR.setState(querykey,STOPPED);                                                            // when done set state to stopped
 }
-}}}
 ```
 修改其中的全局变量,`displayname`, `version`, `author`.这些值最终会显示在 `FARR`的插件列表中.
 
@@ -82,9 +80,10 @@ function onSearchBegin(querykey, explicit, queryraw, querynokeyword) {
 偷懒的话,只定义用到的就可以了.
 
 ####onInit(currentDirectory)
-called when the plugin start. Initialisations can be done here. If you need the directory of the plugin you can get it here.
-{{{onSearchBegin(querykey, explicit, queryraw, querynokeyword)}}}
-onSearchBegin is called whenever a search begin.
+在插件启动的时候调用,`currentDirectory`为插件所在的目录.
+####onSearchBegin(querykey, explicit, queryraw, querynokeyword)
+`onSearchBegin`在查询开始的时候调用,如果FARR窗口中的值改变了话,也会调用这个函数.
+
 * querykey is the key of the search, you must specify it unchanged when calling FARR.emitResult, FARR.setState or FARR.notifyStateChange
 * explicit is true if the alias match.
 * queryraw is the query with alias
