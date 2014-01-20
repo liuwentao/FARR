@@ -27,6 +27,10 @@
 * gitstar 列出所有加星的repo
 * git +star 可以更新本地端缓存
 
+###pm2.5查询
+
+基于[PM2.5.in](http://www.pm25.in)提供的接口,获得某个城市的`pm2.5`信息
+
 ###ALIAS
 * Pinboard
  * `ps `+关键词 搜索所有的搜藏页.支持标题
@@ -37,3 +41,5 @@
  * vn 查看v2ex上面最新的帖子.支持在这些帖子中搜索
 * GITHUB
  * `gitstar `+关键词 列出所有加星的repo
+* PM2.5
+ * pm 城市+o
